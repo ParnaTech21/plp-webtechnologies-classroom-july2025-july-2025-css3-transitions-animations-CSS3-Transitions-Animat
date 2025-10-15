@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS & JavaScript Animation Demo</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1>🎬 Dynamic Web UI Demo</h1>
+
+  <!-- Part 1: CSS Transitions & Animations -->
+  <section id="css-demo">
+    <h2>Part 1: CSS3 Transitions and Animations</h2>
+    <button class="animated-btn">Hover Me!</button>
+    <div class="fading-box">I fade in and out on hover.</div>
+    <div class="bouncing-ball"></div>
+  </section>
+
+  <!-- Part 2: JavaScript Functions -->
+  <section id="js-demo">
+    <h2>Part 2: JavaScript Functions</h2>
+    <button onclick="showFunctionDemo()">Run Function Demo</button>
+    <div id="function-result"></div>
+  </section>
+
+  <!-- Part 3: JS Triggering CSS Animations -->
+  <section id="combo-demo">
+    <h2>Part 3: Combining CSS Animations with JS</h2>
+    <button id="animate-box-btn">Animate Box!</button>
+    <div id="animated-box" class="box"></div>
+
+    <button id="show-modal-btn">Show Modal</button>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal-btn" class="close">&times;</span>
+        <p>This modal slides & fades in/out.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

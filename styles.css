@@ -1,0 +1,134 @@
+/* -------------------------------
+   Part 1: CSS Transitions & Animations
+--------------------------------- */
+
+/* Animated Button Hover */
+.animated-btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.animated-btn:hover {
+  background: #4f46e5;
+  transform: scale(1.1) rotate(-3deg);
+}
+
+/* Fade In/Out Box */
+.fading-box {
+  width: 200px;
+  height: 80px;
+  background: #ffe066;
+  margin: 1em 0;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 12px;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.fading-box:hover {
+  opacity: 0.3;
+}
+
+/* Continuous Bouncing Ball Animation */
+.bouncing-ball {
+  width: 40px;
+  height: 40px;
+  background: #ff6f61;
+  border-radius: 50%;
+  margin: 1em auto;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-40px) scaleY(1.2);
+  }
+}
+
+/* -------------------------------
+   Part 3: JS Triggering CSS Animations
+--------------------------------- */
+
+/* Box to animate */
+.box {
+  width: 100px;
+  height: 100px;
+  background: #48bb78;
+  margin: 1em 0;
+  border-radius: 10px;
+  transition: box-shadow 0.4s;
+}
+
+/* Animated state for box */
+.box.animated {
+  animation: popBox 0.8s forwards;
+  box-shadow: 0 4px 24px #2224;
+}
+
+@keyframes popBox {
+  0% { transform: scale(1) rotate(0deg);}
+  50% { transform: scale(1.2) rotate(8deg);}
+  80% { transform: scale(0.92) rotate(-5deg);}
+  100% { transform: scale(1) rotate(0deg);}
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  animation-fill-mode: forwards;
+}
+
+.modal.show {
+  display: flex;
+  animation: modalIn 0.7s;
+}
+
+.modal.hide {
+  animation: modalOut 0.5s;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Modal content */
+.modal-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 14px;
+  min-width: 280px;
+  box-shadow: 0 6px 30px #0002;
+  transform: translateY(-60px);
+  animation: slideUp 0.5s;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(60px);}
+  to { transform: translateY(0);}
+}
+
+.close {
+  position: absolute;
+  top: 1em; right: 1em;
+  font-size: 2em;
+  cursor: pointer;
+  color: #6c63ff;
+}
